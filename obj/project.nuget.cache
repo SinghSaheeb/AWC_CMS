@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vUSq8/yX+Mw=",
+  "dgSpecHash": "fou055feS6w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\AWC_CMS.csproj",
+  "projectFilePath": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS\\AWC_CMS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cspl-26\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Cspl-26\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -8732,11 +8732,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\AWC_CMS.csproj",
+      "projectUniqueName": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS\\AWC_CMS.csproj",
       "projectName": "AWC_CMS",
-      "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\AWC_CMS.csproj",
+      "projectPath": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS\\AWC_CMS.csproj",
       "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\obj\\",
+      "outputPath": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8754,20 +8754,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj": {
-              "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj"
+            "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.BO\\AWC_CMS.BO.csproj": {
+              "projectPath": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.BO\\AWC_CMS.BO.csproj"
             },
-            "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj": {
-              "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj"
+            "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj": {
+              "projectPath": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj"
             },
-            "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj": {
-              "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj"
+            "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj": {
+              "projectPath": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj"
             },
-            "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj": {
-              "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj"
+            "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj": {
+              "projectPath": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj"
             },
-            "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj": {
-              "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj"
+            "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj": {
+              "projectPath": "D:\\Projects\\AWC_CMS_2.0\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj"
             }
           }
         }
