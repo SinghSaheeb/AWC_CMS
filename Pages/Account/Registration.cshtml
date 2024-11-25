@@ -1,0 +1,72 @@
+﻿@page "/Registration"
+@{
+    ViewBag.Title = "Registration";
+    Layout = "_AuthLayout";
+}
+
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="pt-4 pb-2">
+            <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
+            <p class="text-center small">Enter your personal details to create account</p>
+        </div>
+        <form id="registrationForm" class="row g-3" onsubmit="return validatePasswordMatch()">
+            @Html.AntiForgeryToken() <!-- CSRF Token -->
+            <div class="col-12">
+                <div class="form-floating">
+                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Base Course", selectId = "ddlCourse", isRequired = true, isInvalid = true })
+                    <label for="ddlCourse">Course</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" id="txtPersonalNumber" name="persNo" class="form-control is-invalid" required placeholder="" pattern="^[A-Za-z]{2}\d{5}[A-Za-z]{1}$" maxlength="8" title="Enter a valid code (e.g., IC12345A).">
+                    <label for="txtPersonalNumber">Personal Number</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control is-invalid" required id="txtName" maxlength="50" placeholder="" />
+                    <label for="txtName">Name</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="email" id="txtEmail" name="email" class="form-control is-invalid" placeholder="" required maxlength="100" />
+                    <label for="txtEmail">Email</label>
+                </div>
+            </div>
+            <!-- Mobile Number Field -->
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="tel" id="txtMobile" name="mobile" class="form-control is-invalid" placeholder="Enter your mobile number" required pattern="^\d{10}$" maxlength="10" title="Enter a valid 10-digit mobile number.">
+                    <label for="txtMobile">Mobile Number</label>
+                </div>
+            </div>
+            <!-- Password Field -->
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="password" name="password" class="form-control is-invalid" id="txtPassword" maxlength="16" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$" title="Password must be 8-16 characters long, contain at least one uppercase letter, one lowercase letter, and one number.">
+                    <label for="txtPassword">Password</label>
+                </div>
+            </div>
+            <!-- Confirm Password Field -->
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="password" name="confirmPassword" class="form-control is-invalid" id="txtConfirmPassword" maxlength="16" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$" title="Password must be 8-16 characters long, contain at least one uppercase letter, one lowercase letter, and one number.">
+                    <label for="txtConfirmPassword">Confirm Password</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100" type="submit">Create Account</button>
+            </div>
+            <div class="col-12">
+                <p class="small mb-0">Already have an account? <a href="@Url.Content("/Login")">Log in</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/Account/Registration.cshtml.js")"></script>
+}

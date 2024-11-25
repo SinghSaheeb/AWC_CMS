@@ -1,0 +1,842 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\AWC_CMS.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj",
+        "projectName": "AWC_CMS.BO",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.GenBase\\AWC_CMS.GenBase.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.GenBase\\AWC_CMS.GenBase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Cmn\\AWC_CMS.Cmn.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Cmn\\AWC_CMS.Cmn.csproj",
+        "projectName": "AWC_CMS.Cmn",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Cmn\\AWC_CMS.Cmn.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Cmn\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj",
+        "projectName": "AWC_CMS.DAL",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.GenBase\\AWC_CMS.GenBase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.GenBase\\AWC_CMS.GenBase.csproj",
+        "projectName": "AWC_CMS.GenBase",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.GenBase\\AWC_CMS.GenBase.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.GenBase\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Cmn\\AWC_CMS.Cmn.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Cmn\\AWC_CMS.Cmn.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj",
+        "projectName": "AWC_CMS.Hndls",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj",
+        "projectName": "AWC_CMS.Repos",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj"
+              },
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj"
+              },
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj"
+              },
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Utils\\AWC_CMS.Utils.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Utils\\AWC_CMS.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Utils\\AWC_CMS.Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Utils\\AWC_CMS.Utils.csproj",
+        "projectName": "AWC_CMS.Utils",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Utils\\AWC_CMS.Utils.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Utils\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj",
+        "projectName": "AWC_CMS.VComps",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.VComps\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj"
+              },
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\AWC_CMS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\AWC_CMS.csproj",
+        "projectName": "AWC_CMS",
+        "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\AWC_CMS.csproj",
+        "packagesPath": "C:\\Users\\Cspl-26\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cspl-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.BO\\AWC_CMS.BO.csproj"
+              },
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.DAL\\AWC_CMS.DAL.csproj"
+              },
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Hndls\\AWC_CMS.Hndls.csproj"
+              },
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.Repos\\AWC_CMS.Repos.csproj"
+              },
+              "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj": {
+                "projectPath": "C:\\Users\\Cspl-26\\Downloads\\AWC_CMS\\AWC_CMS\\AWC_CMS.VComps\\AWC_CMS.VComps.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.Encodings.Web": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

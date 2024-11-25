@@ -1,0 +1,35 @@
+﻿@using AWC_CMS.GenBase
+@model IEnumerable<SelectListItem>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<select class="form-select @(ViewData["IsInvalid"] != null && (bool)ViewData["IsInvalid"] ? "is-invalid" : "")"
+        id="@ViewData["SelectId"]"
+        name="@ViewData["SelectId"]"
+@(ViewData["IsRequired"] != null && (bool)ViewData["IsRequired"] ? "required" : "")>
+    @if (Model != null && Model.Any())
+    {
+        <option value="" selected>Select</option>
+        foreach (var item in Model)
+        {
+            <option value="@item.Value">@item.Text</option>
+        }
+    }
+    else
+    {
+        <option value="" disabled>No items available</option>
+    }
+</select>
+
+<input type="hidden" id="@("hdn_" + ViewData["SelectId"])" name="@("hdn_" + ViewData["SelectId"])" value="" />
+
+<script type="text/javascript">
+            $(document).ready(function () {
+            // Select the dropdown by its dynamic ID
+            var selectId = "@ViewData["SelectId"]";
+                $("#" + selectId).on("change", function () {
+                    var selectedValue = $(this).val();
+            // Update the hidden input dynamically
+            $("#hdn_" + selectId).val(selectedValue);
+        });
+    });
+</script>

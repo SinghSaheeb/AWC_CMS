@@ -1,0 +1,74 @@
+﻿@page
+@{
+    ViewBag.Title = "Syndicate";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Syndicate",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Masters", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Syndicate", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+@await Component.InvokeAsync("SectionTable", new
+{
+    sectionId = "Syndicate",
+    buttonText = "Add Syndicate",
+    tableHeaders = new List<string> {
+        "#",
+        "Division",
+        "Strength",
+        "Syndicate",
+        "Action"
+    }
+})
+
+<!-- Syndicate Modal -->
+<div class="modal fade" id="syndicateModal" tabindex="-1" aria-labelledby="syndicateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="syndicateModalLabel">Add/Edit Syndicate</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="syndicateForm" class="row g-3">
+                    <input type="hidden" id="syndicateId" />
+                    @Html.AntiForgeryToken() <!-- CSRF Token -->
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <select id="divisionId" class="form-control" required>
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                            <label for="divisionId">Division</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="number" step="1" min="0" id="strength" class="form-control" placeholder="" required step="1" />
+                            <label for="strength">Strength</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="text" id="syndicateName" class="form-control" placeholder="" required />
+                            <label for="syndicateName">Syndicate Name</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/Masters/Syndicate.cshtml.js")"></script>
+}

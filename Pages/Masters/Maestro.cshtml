@@ -1,0 +1,83 @@
+﻿@page
+@{
+    ViewBag.Title = "Maestro";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Maestro",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Masters", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Maestro", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+<section class="section">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">&nbsp;</h5>
+            <div class="row">
+                <div class="col">
+                    <select id="maestro" class="form-control" required>
+                    </select>
+                </div>
+                <div class="col">
+                    <div class="btn-group">
+                        <button id="searchBtn" class="btn btn-info"><i class="bi bi-search"></i></button>
+                        <button id="addBtn" class="btn btn-primary"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <table class="table table-striped" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Maestro</th>
+                        <th>Value</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Maestro Modal -->
+<div class="modal fade" id="maestroModal" tabindex="-1" aria-labelledby="maestroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="maestroModalLabel">Add/Edit Maestro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="maestroForm" class="row g-3">
+                    <input type="hidden" id="maestroId" />
+                    <input type="hidden" id="maestroAlias" />
+                    @Html.AntiForgeryToken() <!-- CSRF Token -->
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="text" id="maestroValue" class="form-control" placeholder="" maxlength="100" required />
+                            <label id="maestroValueLabel" for="maestroValue"></label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/Masters/Maestro.cshtml.js")"></script>
+}

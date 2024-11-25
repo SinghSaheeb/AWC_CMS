@@ -1,0 +1,938 @@
+﻿@page
+@{
+    ViewBag.Title = "Officer";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Officer",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "HR", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Personal & Service Particulars", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Officer", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+<section class="section">
+    <form id="OfficerForm">
+        @Html.AntiForgeryToken() <!-- CSRF Token -->
+        <div class="card">
+            <div class="card-body">
+                <br />
+                <div class="row">
+                    <!-- Save and Reset Buttons aligned left -->
+                    <div class="col">
+                        <button class="btn btn-primary me-2" type="submit" title="Save">
+                            <i class="bi bi-save"></i> Save
+                        </button>
+                        <button class="btn btn-secondary" id="resetBtn" title="Reset" onclick="location.reload();">
+                            <i class="bi bi-arrow-clockwise"></i> Reset
+                        </button>
+                    </div>
+                </div>
+                <hr />
+                <h5 class="card-title">
+                    Basic Details
+                </h5>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Army Type", selectId = "ddlService", isRequired = true, isInvalid = true })
+                            <label for="ddlService">Service</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Role", selectId = "ddlStaffRole", isRequired = true, isInvalid = true })
+                            <label for="ddlStaffRole">Staff Role</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <select class="form-select is-invalid" id="ddlPostedTo" required>
+                                <option value="">Select</option>
+                                <option value="ArmyAviation">Army Aviation Corps (AAC)</option>
+                                <option value="ParaSF">Parachute Regiment (Special Forces Wing)</option>
+                                <option value="GarudCommando">Garud Commando Force (Air Force Wing)</option>
+                                <option value="NavalAviation">Naval Aviation Wing</option>
+                                <option value="SignalWing">Corps of Signals (Signal Wing)</option>
+                                <option value="ICWing">Intelligence Corps (IC Wing)</option>
+                                <option value="JAGBranch">Judge Advocate General's (JAG) Branch</option>
+                                <option value="ProvostCorps">Provost Corps (Military Police Wing)</option>
+                            </select>
+                            <label for="ddlPostedTo">Posted To</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" id="txtPersonalNumber" name="persNo" class="form-control is-invalid" required pattern="^[A-Za-z]{2}\d{5}[A-Za-z]{1}$" maxlength="8" title="Enter a valid code (e.g., IC12345A)." placeholder="">
+                            <label for="txtPersonalNumber">Personal Number</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" required id="txtName" maxlength="50" placeholder="">
+                            <label for="txtName">Name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" required id="txtInitials" maxlength="5" placeholder="Initials">
+                            <label for="txtInitials">Initials</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("Rank", new { selectId = "ddlSubstantiveRank", isRequired = true, isInvalid = true })
+                            <label for="ddlSubstantiveRank">Substantive Rank</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="date" class="form-control is-invalid" required id="dtSubstantiveRankDate" placeholder="">
+                            <label for="dtSubstantiveRankDate">Substantive Rank Date</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("Rank", new { selectId = "ddlActingRank" })
+                            <label for="ddlActingRank">Acting Rank</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="date" class="form-control" id="dtActingRankDate" placeholder="">
+                            <label for="dtActingRankDate">Acting Rank Date</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="date" class="form-control is-invalid" required id="dtCommissionDate" placeholder="">
+                            <label for="dtCommissionDate">Date of Commission</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="date" class="form-control is-invalid" required id="dtSeniorityDate" placeholder="">
+                            <label for="dtSeniorityDate">Date of Seniority</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="date" class="form-control is-invalid" required id="dtFirstCommissionDate" placeholder="">
+                            <label for="dtFirstCommissionDate">Date of First Commission</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="date" class="form-control is-invalid" required id="dtBirthDate" placeholder="">
+                            <label for="dtBirthDate">Date of Birth</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Regiment Corp", selectId = "ddlRegimentCorp", isRequired = true, isInvalid = true })
+                            <label for="ddlRegimentCorp">Regiment Corp</label>
+                        </div>
+                    </div>
+                    <div class="col" id="gorkhaRegimentContainer" style="display:none;">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Gorkha Regiment", selectId = "ddlGorkhaRegiment", isInvalid = true })
+                            <label for="ddlGorkhaRegiment">Gorkha Regiment</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Commission Type", selectId = "ddlCommissionType", isRequired = true, isInvalid = true })
+                            <label for="ddlCommissionType">Commission Type</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Religion", selectId = "ddlReligion", isRequired = true, isInvalid = true })
+                            <label for="ddlReligion">Religion Domination</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Medical", selectId = "ddlMedical" })
+                            <label for="ddlMedical">Medical Category</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Blood Group", selectId = "ddlBloodGroup" })
+                            <label for="ddlBloodGroup">Blood Group</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtAuthority" maxlength="50" placeholder="">
+                            <label for="txtAuthority">Authority</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtPlaceOfBirth" maxlength="50" placeholder="">
+                            <label for="txtPlaceOfBirth">Place of Birth</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtNationality" maxlength="50" placeholder="">
+                            <label for="txtNationality">Nationality</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtMotherTongue" maxlength="50" placeholder="">
+                            <label for="txtMotherTongue">Mother Tongue</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtPreviousOccupation" maxlength="50" placeholder="">
+                            <label for="txtPreviousOccupation">Previous Occupation</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtCdaAccountNumber" maxlength="50" placeholder="">
+                            <label for="txtCdaAccountNumber">CDA (O) Account Number</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtIdentityCardNumber" maxlength="50" placeholder="">
+                            <label for="txtIdentityCardNumber">Identity Card Number</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtIdentificationMarks" maxlength="50" placeholder="">
+                            <label for="txtIdentificationMarks">Identification Marks</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="date" class="form-control" id="txtPostingDate" placeholder="">
+                            <label for="txtPostingDate">Posting Date</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Academic Details
+                </h5>
+                <div class="border border-primary p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtSchoolName" maxlength="100" placeholder="">
+                                <label for="txtSchoolName">School/College Name</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="number" step="1" min="0" max="9999" class="form-control is-invalid" id="txtExaminationYear" placeholder="" oninput="this.value = this.value.slice(0, 4);">
+                                <label for="txtExaminationYear">Examination Year</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <select class="form-select is-invalid" id="ddlAcademicDetailsDivisionClass">
+                                    <option value="">Select</option>
+                                    <option value="I">I</option>
+                                    <option value="II">II</option>
+                                    <option value="III">III</option>
+                                    <option value="Q">Q</option>
+                                </select>
+                                <label for="ddlAcademicDetailsDivisionClass">Division / Class</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Examination", selectId = "ddlExamination", isInvalid = true })
+                                <label for="ddlExamination">Examination</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button id="addAcademicDetailsTableBtn" type="button" class="btn btn-primary btn-lg" onclick="addAcademicDetailsRow()"><i class="bi bi-plus-circle"></i></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-bordered" id="academicDetailsTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name of School / Collage</th>
+                                        <th>Examination Year</th>
+                                        <th>Division / Class</th>
+                                        <th class="d-none">ExaminationId</th>
+                                        <th>Examination</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Professional / Technical Qualifications
+                </h5>
+                <div class="border border-primary p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Qualification", selectId = "ddlQualification", isInvalid = true })
+                                <label for="ddlQualification">Qualification</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtInstitution" maxlength="100" placeholder="">
+                                <label for="txtInstitution">Institution</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="number" step="1" min="0" max="9999" class="form-control is-invalid" id="txtYearOfPassing" placeholder="" oninput="this.value = this.value.slice(0, 4);">
+                                <label for="txtYearOfPassing">Year of Passing</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <select class="form-select is-invalid" id="ddlTechnicalQualificationsDivisionClass">
+                                    <option value="">Select</option>
+                                    <option value="I">I</option>
+                                    <option value="II">II</option>
+                                    <option value="III">III</option>
+                                    <option value="IV">IV</option>
+                                </select>
+                                <label for="ddlTechnicalQualificationsDivisionClass">Division / Class</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button id="btnAddTechnicalQualifications" class="btn btn-primary btn-lg" type="button" onclick="addTechnicalQualificationsRow()"><i class="bi bi-plus-circle"></i></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-bordered" id="technicalQualificationsTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Qualification</th>
+                                        <th class="d-none">QualificationId</th>
+                                        <th>Institution</th>
+                                        <th>Year of Passing</th>
+                                        <th>Division / Class</th>
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="card-title">
+                    Course Details
+                </h5>
+                <div class="border border-primary p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Base Course", selectId = "ddlCourse", isRequired = false, isInvalid = true })
+                                <label for="ddlCourse">Course</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtGrading" placeholder="">
+                                <label for="txtGrading">Grading Obtained</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <textarea class="form-control is-invalid" id="txtCourseDetailsInstitution" placeholder=""></textarea>
+                                <label for="txtCourseDetailsInstitution">Institution & Location</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="txtCourseDetailsfrom" placeholder="">
+                                <label for="txtCourseDetailsfrom">From</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="txtCourseDetailsTo" placeholder="">
+                                <label for="txtCourseDetailsTo">To</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button id="addCourseBtn" class="btn btn-primary btn-lg" type="button" onclick="addCourseDetailsRow()"><i class="bi bi-plus-circle"></i></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-bordered" id="CourseDetailsTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Course Name</th>
+                                        <th class="d-none">CourseId</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Grading Obtained</th>
+                                        <th>Institution</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Promotion Examination Details
+                </h5>
+
+                <div class="border border-primary p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtPromotionExam" placeholder="">
+                                <label for="txtPromotionExam">Examination</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="txtPromotionduedate" placeholder="">
+                                <label for="txtPromotionduedate">Due Date</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="txtPromotionduePassing" placeholder="">
+                                <label for="txtPromotionduePassing">Date of Passing</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <select class="form-select is-invalid" id="ddlPromotiondueWhether">
+                                    <option value="">Select</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                                <label for="ddlPromotiondueWhether">Whether Obtained Distinction</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtPromotionChances" placeholder="">
+                                <label for="txtPromotionChances">Chances Remaining</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button id="addCourseBtn" class="btn btn-primary btn-lg" type="button" onclick="addPromotionExaminationDetailsRow()"><i class="bi bi-plus-circle"></i></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-bordered" id="PromotionExaminationDetailsTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Examination</th>
+                                        <th>Due Date</th>
+                                        <th>Date of Passing</th>
+                                        <th>Whether Obtained Distinction</th>
+                                        <th>Chances Remaining</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Staff Employment
+                </h5>
+                <div class="border border-primary p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                @await Component.InvokeAsync("Unit", new { selectId = "ddlStaffEmploymentUnit", isInvalid = true })
+                                <label for="ddlStaffEmploymentUnit">Formation/Unit</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="dtStaffEmploymentFrom" placeholder="">
+                                <label for="dtStaffEmploymentFrom">From Date</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="dtStaffEmploymentTo" placeholder="">
+                                <label for="dtStaffEmploymentTo">To Date</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtAppointmentHeld" maxlength="50" placeholder="">
+                                <label for="txtAppointmentHeld">Appointment Held</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <textarea type="text" class="form-control is-invalid" id="txtPlace" maxlength="250" placeholder=""></textarea>
+                                <label for="txtPlace">Place</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button id="addstaffBtn" class="btn btn-primary btn-lg" type="button" onclick="addStaffEmployment()"><i class="bi bi-plus-circle"></i></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-bordered" id="StaffEmploymentTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Formation/Unit</th>
+                                        <th class="d-none">UnitId</th>
+                                        <th>Appointment Held</th>
+                                        <th>Place</th>
+                                        <th>From Date</th>
+                                        <th>To Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Decoration / Stars / Awards
+                </h5>
+                <div class="border border-primary p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Honor", selectId = "ddlHonor", isInvalid = true })
+                                <label for="ddlHonor">Decoration / Stars / Medals</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtDecorationAuthority" placeholder="">
+                                <label for="txtDecorationAuthority">Authority</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                @await Component.InvokeAsync("Unit", new { selectId = "ddlDecorationUnit", isInvalid = true })
+                                <label for="ddlDecorationUnit">Unit</label>
+                                <p class="small">(with which serving at the time of award)</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button id="addDecorationBtn" class="btn btn-primary btn-lg" type="button" onclick="addDecoration()"><i class="bi bi-plus-circle"></i></button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-bordered" id="DecorationTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Decoration / Stars / Medals</th>
+                                        <th class="d-none">DecorationId</th>
+                                        <th>Authority</th>
+                                        <th>Unit</th>
+                                        <th class="d-none">UnitId</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Permanent Home Address
+                </h5>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" id="houseNumber" name="houseNumber" maxlength="50" placeholder="" required>
+                            <label for="houseNumber">House Number / House Name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" id="villageMohalla" name="villageMohalla" maxlength="50" placeholder="" required>
+                            <label for="villageMohalla">Village / Mohalla</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="postOffice" name="postOffice" maxlength="50" placeholder="">
+                            <label for="postOffice">Post Office</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="tehsil" name="tehsil" maxlength="50" placeholder="">
+                            <label for="tehsil">Tehsil</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" id="district" name="district" maxlength="50" placeholder="" required>
+                            <label for="district">District</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "State", selectId = "ddlState", isRequired = true, isInvalid = true })
+                            <label for="ddlState">State</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" id="nearestRailwayStation" name="nearestRailwayStation" maxlength="50" placeholder="" required>
+                            <label for="nearestRailwayStation">Nearest Railway Station</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Account Details
+                </h5>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title">Single Bank A/C Details:</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" id="txtSingleAccountNumber" name="txtSingleAccountNumber" maxlength="100" placeholder="" required>
+                            <label for="txtSingleAccountNumber">Single Bank A/C No</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" id="txtSingleBankName" name="txtSingleBankName" maxlength="100" placeholder="" required>
+                            <label for="txtSingleBankName">Bank Name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" id="txtSingleBankCode" name="txtSingleBankCode" maxlength="100" placeholder="" required>
+                            <label for="txtSingleBankCode">Bank Code</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <textarea class="form-control is-invalid" id="txtSingleBankAddress" name="txtSingleBankAddress" maxlength="100" placeholder="" required></textarea>
+                            <label for="txtareaSingleBankAddress">Bank Address</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title">Joint Bank A/C Details:</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtJointAccountNumber" maxlength="100" placeholder="">
+                            <label for="txtJointAccountNumber">Joint Bank A/C No</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtJointBankName" maxlength="100" placeholder="">
+                            <label for="txtJointBankName">Bank Name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtJointBankCode" maxlength="100" placeholder="">
+                            <label for="txtJointBankCode">Bank Code</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <textarea class="form-control" id="txtJointBankAddress" maxlength="100" placeholder=""></textarea>
+                            <label for="txtareaJointBankAddress">Bank Address</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Next of Kin
+                </h5>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control is-invalid" id="txtNOKName" maxlength="50" required placeholder="">
+                            <label for="txtNOKName">Name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Relationship", selectId = "ddlNOKRelation", isRequired = true, isInvalid = true })
+                            <label for="ddlNOKRelation">Relationship</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <textarea class="form-control is-invalid" placeholder="" id="txtNOKAddress" required></textarea>
+                            <label for="txtNOKAddress">Address</label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-floating">
+                            <textarea class="form-control is-invalid" placeholder="" id="txtNOKBankAddress" required></textarea>
+                            <label for="txtNOKBankAddress">Bank Name And Address</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <label for="willExec">Whether "Will" Executed: </label>
+                        <br />
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input is-invalid" id="rdWillYes" name="willExec" value="yes" onclick="toggleWillLocation()" required>
+                            <label class="form-check-label" for="rdWillYes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input is-invalid" id="rdWillNo" name="willExec" value="no" onclick="toggleWillLocation()" required>
+                            <label class="form-check-label" for="rdWillNo">No</label>
+                        </div>
+                    </div>
+                    <div id="divWillLocation" class="col" style="display: none;">
+                        <div class="form-floating">
+                            <textarea type="text" class="form-control is-invalid" id="txtWillLocation" maxlength="255" placeholder=""></textarea>
+                            <label for="txtWillLocation">If Yes, It's Location</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Family Details
+                </h5>
+                <div class="row">
+                    <div class="col">
+                        <label for="MStatus">Marital Status</label>
+                        <br />
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input is-invalid" id="rdSingle" name="MStatus" value="single" onclick="toggleMaritalStatusSection()" required>
+                            <label class="form-check-label" for="rdSingle">Single</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input is-invalid" id="rdMarried" name="MStatus" value="married" onclick="toggleMaritalStatusSection()" required>
+                            <label class="form-check-label" for="rdMarried">Married</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input is-invalid" id="rdWidower" name="MStatus" value="widower" onclick="toggleMaritalStatusSection()" required>
+                            <label class="form-check-label" for="rdWidower">Widower</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input is-invalid" id="rdDivorce" name="MStatus" value="divorce" onclick="toggleMaritalStatusSection()" required>
+                            <label class="form-check-label" for="rdDivorce">Divorce</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- If Married section (initially hidden) -->
+                <div id="divIfMarried" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 class="card-title">If Married:</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtNationalityOfSpouseBeforeMarriage" maxlength="50" placeholder="">
+                                <label for="txtNationalityOfSpouseBeforeMarriage">Nationality Of Spouse Before Marriage</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="txtDateOfMarriage" placeholder="Date of Marriage">
+                                <label for="txtDateOfMarriage">Date of Marriage</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtPlaceOfMarriage" maxlength="50" placeholder="">
+                                <label for="txtPlaceOfMarriage">Place of Marriage</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtRitesLaws" maxlength="50" placeholder="">
+                                <label for="txtRitesLaws">Under what Rites / Laws</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtToWhom" maxlength="50" placeholder="">
+                                <label for="txtToWhom">To Whom</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="txtDobOfSpouse" placeholder="">
+                                <label for="txtDobOfSpouse">DOB Of Spouse</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <textarea class="form-control is-invalid" id="txtAuthority" maxlength="200" placeholder=""></textarea>
+                                <label for="txtAuthority">Authority, If Any</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="card-title">
+                    Children Details
+                </h5>
+                <div class="border border-primary p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtChildName" placeholder="">
+                                <label for="txtName">Child's Name</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="date" class="form-control is-invalid" id="dtDateOfBirth" placeholder="">
+                                <label for="dtDateOfBirth">Date of Birth</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="txtChildPlaceOfBirth" maxlength="255" placeholder="">
+                                <label for="txtChildPlaceOfBirth">Place of Birth</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <select class="form-select is-invalid" id="ddlGender">
+                                    <option value="">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <label for="ddlGender">Gender</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button id="addChildrenDetailsBtn" class="btn btn-primary btn-lg" onclick="addChildrenDetails()">
+                                <i class="bi bi-plus-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-bordered" id="ChildrenDetailsTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Gender</th>
+                                        <th>Date of Birth</th>
+                                        <th>Place of Birth</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/HR/PersonalServiceParticulars/Officers/Add.cshtml.js")"></script>
+}

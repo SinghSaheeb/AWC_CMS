@@ -1,0 +1,98 @@
+/* _content/AWC_CMS/Pages/Shared/_AuthLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-jqebtsyvb9] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-jqebtsyvb9] {
+  color: #0077cc;
+}
+
+.btn-primary[b-jqebtsyvb9] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-jqebtsyvb9], .nav-pills .show > .nav-link[b-jqebtsyvb9] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-jqebtsyvb9] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-jqebtsyvb9] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-jqebtsyvb9] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-jqebtsyvb9] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-jqebtsyvb9] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/AWC_CMS/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-ngwd18ldch] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-ngwd18ldch] {
+  color: #0077cc;
+}
+
+.btn-primary[b-ngwd18ldch] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-ngwd18ldch], .nav-pills .show > .nav-link[b-ngwd18ldch] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-ngwd18ldch] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-ngwd18ldch] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-ngwd18ldch] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-ngwd18ldch] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-ngwd18ldch] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

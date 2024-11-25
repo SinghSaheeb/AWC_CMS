@@ -1,0 +1,205 @@
+﻿@page
+@using AWC_CMS.Hndls
+@inject SessUser SessUser
+@{
+    ViewBag.Title = "Leave's Approval";
+    //SessUser.Id = "B275B485-A49D-EF11-83B7-E27521C22D65";
+}
+
+<div class="pagetitle">
+    <h1>Leave's Approval</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/Dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item active">Leave's Approval</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">&nbsp;</h5>
+            <table class="table table-bordered border-primary" id="LeaveApprovalTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Personal Number</th>
+                        <th>Absence</th>
+                        <th>From Date</th>
+                        <th>To Date</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- Dynamic content -->
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="~/js/formUtils.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Load users on page load
+        loadUsers();
+
+        function loadUsers() {
+            // AJAX call to fetch leave data
+            $.ajax({
+                url: '/api/Leaves', // API endpoint
+                type: 'GET',
+                headers: {
+                    'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val() // CSRF token for security
+                },
+                success: function (data) {
+                    // Clear the existing rows in the table
+                    $('#LeaveApprovalTable tbody').empty();
+
+                    // Iterate through the fetched data
+                    $.each(data, function (index, user) {
+                        var $row = $('<tr>');
+
+                        // Populate table row with user data
+                        $row.append($('<td>').text(index + 1)); // Serial Number
+                        $row.append($('<td>').text(user.PersonalNumber));
+                        $row.append($('<td>').text(user.Absence));
+                        $row.append($('<td>').text(new Date(user.FromDate).toLocaleDateString('en-US')));
+                        $row.append($('<td>').text(new Date(user.ToDate).toLocaleDateString('en-US')));
+                        $row.append($('<td>').text(new Date(user.CreatedAt).toLocaleDateString('en-US')));
+
+                        // Prepare action buttons
+                        var $actionCell = $('<td>');
+                        if (
+                            (user.DirectingStaffSig == true && user.SeniorInstructorSig == null && user.ChiefInstructorSig == null) ||
+                            (user.DirectingStaffSig == true && user.SeniorInstructorSig == true && user.ChiefInstructorSig == null) ||
+                            (user.DirectingStaffSig == true && user.SeniorInstructorSig == true && user.ChiefInstructorSig == true)
+
+                            //(user.DirectingStaffSig == true && user.SeniorInstructorSig == false  && user.ChiefInstructorSig == null)
+                        ) {
+                            // Show 'Approved' badge and 'Reject' button
+                            var $approvedBadge = $('<span>')
+                                .addClass('badge bg-success')
+                                .html('<i class="bi bi-check-circle me-1"></i> Approved');
+
+                            var $rejectButton = $('<button>')
+                                .addClass('btn btn-danger ms-2') // Added spacing for aesthetics
+                                .text('Reject')
+                                .attr('data-id', user.Id)
+                                .on('click', function () {
+                                    handleRejection($(this).data('id'));
+                                });
+
+                            $actionCell.append($approvedBadge).append($rejectButton);
+                        } else {
+                            // Show 'Approve' and 'Reject' buttons
+                            var $approveButton = $('<button>')
+                                .addClass('btn btn-primary me-2')
+                                .text('Approve')
+                                .attr('data-id', user.Id)
+                                .on('click', function () {
+                                    handleApproval($(this).data('id'));
+                                });
+
+                            var $rejectButton = $('<button>')
+                                .addClass('btn btn-danger')
+                                .text('Reject')
+                                .attr('data-id', user.Id)
+                                .on('click', function () {
+                                    handleRejection($(this).data('id'));
+                                });
+
+                            $actionCell.append($approveButton).append($rejectButton);
+                        }
+
+                        // Add action cell to the row
+                        $row.append($actionCell);
+
+                        // Add an ID attribute for dynamic row updates
+                        $row.attr('id', `row-${user.Id}`);
+
+                        // Append the row to the table body
+                        $('#LeaveApprovalTable tbody').append($row);
+                    });
+                },
+                error: function (error) {
+                    // Handle AJAX errors gracefully
+                    alert("Failed to load leave applications. Please try again.");
+                    console.error("Error fetching data:", error);
+                }
+            });
+        }
+
+
+
+        function handleApproval(applicationId) {
+            $.ajax({
+                url: '/api/Leaves',
+                type: 'PUT',
+                contentType: 'application/json',
+                headers: {
+                    'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                },
+                data: JSON.stringify({
+                    Id: applicationId,
+                    IsApproved: true,
+                    ApprovedBy: new Date().toISOString()
+                }),
+                success: function (response) {
+                    var $row = $(`#row-${applicationId}`);
+                    $row.find('button').hide();
+                    $row.find('td:last').html('<span class="badge bg-success">Approved</span>');
+                    alert(response.message);
+                },
+                error: function (error) {
+                    alert("Error approving application.");
+                    console.error("Error details:", error);
+                }
+            });
+        }
+
+        function handleRejection(applicationId) {
+            var reason = prompt("Enter rejection reason:");
+            if (!reason) {
+                alert("Rejection reason is required.");
+                return;
+            }
+            $.ajax({
+                url: '/api/Leaves',
+                type: 'PUT',
+                contentType: 'application/json',
+                headers: {
+                    'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                },
+                data: JSON.stringify({
+                    Id: applicationId,
+                    IsApproved: false,
+                    RejectionReason: reason,
+                    RejectedDate: new Date().toISOString()
+                }),
+                success: function (response) {
+                    var $row = $(`#row-${applicationId}`);
+                    $row.find('td:last').html('<span class="badge bg-danger">Rejected</span>');
+                    alert(response.message);
+                },
+                error: function (error) {
+                    alert("Error rejecting application.");
+                    console.error("Error details:", error);
+                }
+            });
+        }
+    });
+</script>
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+﻿@page
+@{
+    ViewBag.Title = "Student";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Student",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Deployments", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Student", Url = "javascript:void(0)", IsActive = true }
+    }
+    })
+
+@await Component.InvokeAsync("SectionTable", new
+    {
+        sectionId = "Student",
+        tableHeaders = new List<string> {
+            "#",
+            "Category",
+            "Personal Number",
+            "Rank",
+            "Name",
+            "Decoration",
+            "Arms",
+            "Present Unit",
+            "Parent Unit",
+            "Action"
+        }
+    })
+
+<!-- Student Modal -->
+<div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="studentModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="studentForm" class="row g-3">
+                    <input type="hidden" id="deploymentId" />
+                    <input type="hidden" id="studentId" />
+                    @Html.AntiForgeryToken() <!-- CSRF Token -->
+                    <div class="col-6">
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="bi bi-list-ul me-1 text-primary"></i> <b>Category:</b> <label id="lblCategory"></label></li>
+                            <li class="list-group-item"><i class="bi bi-person-badge me-1 text-primary"></i> <b>Personal Number:</b> <label id="lblPersonalNumber"></label></li>
+                            <li class="list-group-item"><i class="bi bi-award me-1 text-primary"></i> <b>Rank:</b> <label id="lblRank"></label></li>
+                            <li class="list-group-item"><i class="bi bi-person me-1 text-primary"></i> <b>Name:</b> <label id="lblName"></label></li>
+                            <li class="list-group-item"><i class="bi bi-building me-1 text-primary"></i> <b>Present Unit:</b> <label id="lblPresentUnit"></label></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Training Year", selectId = "ddlTrainingYear", isRequired = true, isInvalid = true })
+                                    <label for="ddlTrainingYear">Training Year</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Base Course", selectId = "ddlCourse", isRequired = true, isInvalid = true })
+                                    <label for="ddlCourse">Course</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Tutorial", selectId = "ddlTutorial", isRequired = true, isInvalid = true })
+                                    <label for="ddlTutorial">Tutorial</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("Division", new { selectId = "ddlDivision", isRequired = true, isInvalid = true })
+                                    <label for="ddlDivision">Division</label>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("Syndicate", new { selectId = "ddlSyndicate", isRequired = true, isInvalid = true })
+                                    <label for="ddlDivision">Syndicate</label>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Save</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-square"></i> Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/Deployments/Student.cshtml.js")"></script>
+}

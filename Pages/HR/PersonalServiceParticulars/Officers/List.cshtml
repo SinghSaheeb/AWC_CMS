@@ -1,0 +1,37 @@
+﻿@page
+@{
+    ViewBag.Title = "List - Officers";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "List - Officers",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Personal &amp; Service Particulars", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Officers", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "List", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+@await Component.InvokeAsync("SectionTable", new
+{
+    sectionId = "Officers",
+    buttonText = "Add Officers",
+    buttonRedirectUrl = "/HR/PersonalServiceParticulars/Officers/Add",
+    tableHeaders = new List<string> {
+        "#",
+        "Personal Number",
+        "Name",
+        "Date of Birth",
+        "Service",
+        "PostedTo",
+        "Directing Staff",
+        "Action"
+    }
+})
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/HR/PersonalServiceParticulars/Officers/List.cshtml.js")"></script>
+}

@@ -1,0 +1,110 @@
+﻿@page
+@{
+    ViewBag.Title = "Unit";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Unit",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "HR", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Masters", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Unit", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+@await Component.InvokeAsync("SectionTable", new
+    {
+        sectionId = "Unit",
+        buttonText = "Add Unit",
+        tableHeaders = new List<string> { "#", "Unit Name", "SUSNumber", "Address", "State", "PinCode", "Mobile", "NRS", "Remark", "Action" }
+})
+
+<div class="modal fade" id="UnitModal" tabindex="-1" aria-labelledby="UnitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content " >
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="UnitModalLabel">Add/Edit Unit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <form id="UnitForm" class="row g-3">
+                            <input type="hidden" id="UnitId" />
+                            @Html.AntiForgeryToken() <!-- CSRF Token -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" id="txtunit" class="form-control is-invalid" placeholder="" required />
+                                    <label for="txtunit">Unit Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" id="txtsus" class="form-control" placeholder="" />
+                                    <label for="txtsus">SUS NO</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea id="txtadd" class="form-control" placeholder="Enter address here..."></textarea>
+                                    <label for="txtadd">Address</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" id="txtstate" class="form-control" placeholder="" />
+                                    <label for="txtstate">State</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="txtpin" class="form-control" placeholder="" />
+                                            <label for="txtpin">PinCode</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="txttel" class="form-control" placeholder="" />
+                                            <label for="txttel">TelNo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" id="txtnrs" class="form-control" placeholder="" />
+                                    <label for="txtnrs">NRS</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" id="txtremark" class="form-control" placeholder="" />
+                                    <label for="txtremark">Remarks</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/HR/Masters/Unit.cshtml.js")"></script>
+}

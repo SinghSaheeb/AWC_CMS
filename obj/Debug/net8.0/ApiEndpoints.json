@@ -1,0 +1,2795 @@
+[
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
+    "RelativePath": "",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.BaseCourseTenureBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.BaseCourseTenureRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/BaseCourseTenures",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SerialNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BaseCourseId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Strength",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "StartDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegistrationStartDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegistrationEndDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.BaseCourseTenureBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.BaseCourseTenureRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/BaseCourseTenures",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.BaseCourseTenureBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.BaseCourseTenureBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.BaseCourseTenureRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/BaseCourseTenures",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.BaseCourseTenureBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.BaseCourseTenureBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.BaseCourseTenureRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/BaseCourseTenures",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.BaseCourseTenureBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.BlockBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.BlockRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Blocks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivisionId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BlockPrefix",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MesBuildingNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BlockNumber",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumberOfQuarters",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "LivingCapacity",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AccommodationType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.BlockBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.BlockRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Blocks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.BlockBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.BlockBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.BlockRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Blocks",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.BlockBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.BlockBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.BlockRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Blocks",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.BlockBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.CourseBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.CourseRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Courses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CourseName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CourseFor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.CourseBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.CourseRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Courses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.CourseBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.CourseBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.CourseRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Courses",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.CourseBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.CourseBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.CourseRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Courses",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.CourseBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.DirectingStaffBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.DirectingStaffRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/deployment/DirectingStaffs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TrainingYearId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CourseId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TutorialId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivisionId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SyndicateId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.DirectingStaffBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.DirectingStaffRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/deployment/DirectingStaffs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.DirectingStaffBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.DirectingStaffBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.DirectingStaffRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/deployment/DirectingStaffs",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.DirectingStaffBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.DirectingStaffBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.DirectingStaffRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/deployment/DirectingStaffs",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.DirectingStaffBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.SeniorInstructorBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.SeniorInstructorRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/deployment/SeniorInstructors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TrainingYearId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CourseId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TutorialId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivisionId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Officiate",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.SeniorInstructorBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.SeniorInstructorRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/deployment/SeniorInstructors",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.SeniorInstructorBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.SeniorInstructorBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.SeniorInstructorRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/deployment/SeniorInstructors",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.SeniorInstructorBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.SeniorInstructorBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.SeniorInstructorRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/deployment/SeniorInstructors",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.SeniorInstructorBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.StudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.StudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/deployment/Students",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Rank",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Decoration",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Arms",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PresentUnit",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrainingYearId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CourseId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TutorialId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivisionId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SyndicateId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.StudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.StudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/deployment/Students",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.StudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.StudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.StudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/deployment/Students",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.StudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.Deployment.StudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Deployment.StudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/deployment/Students",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.Deployment.StudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.DivisionBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.DivisionRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Divisions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wing",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivisionName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.DivisionBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.DivisionRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Divisions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.DivisionBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.DivisionBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.DivisionRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Divisions",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.DivisionBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.DivisionBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.DivisionRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Divisions",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.DivisionBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.ForeignStudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.ForeignStudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/ForeignStudents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CountryId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShortName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rank",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Decoration",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfCommission",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "MilitaryUnitId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PresentUnit",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MedicalCategory",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TelephoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomNumberAWC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TelephoneNumberAWC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaritalStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WifeName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WifeDateOfBirth",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "NextOfKinAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SelfTalent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WifeTalent",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateTimeOfArrival",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CourseDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.ForeignStudentCourseDetailBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ChildrenDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.ForeignStudentChildDetailBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.ForeignStudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.ForeignStudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/ForeignStudents",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.ForeignStudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.ForeignStudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.ForeignStudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/ForeignStudents",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.ForeignStudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.ForeignStudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.ForeignStudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/ForeignStudents",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.ForeignStudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.IndianStudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.IndianStudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/IndianStudents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Rank",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Decoration",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfCommission",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfSeniority",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "LineDirectorate",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MilitaryUnit",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegimentCorp",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "GorkhaRegiment",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Terrain",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpecialForce",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RashtriyaRifle",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CentralBasePostOffice",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PresentUnit",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ParentUnit",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PostalAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ArmyPinCode",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrigadeHeadquarter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivisionHeadquarter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CorpsHeadquarter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CommandHeadquarter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NameOfIO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NameOfRO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NameOfSRO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CdaAcNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MedicalCategory",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MobileNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Attendee",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartBExamPass",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartDExamPass",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DsscExamPass",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DstscExamPass",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AlmcExamPass",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IscExamPass",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "NextKinName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Relationship",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContactNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpouseName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpouseOccupation",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OccupationNature",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatetimeOfArrival",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.IndianStudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.IndianStudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/IndianStudents",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.IndianStudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.IndianStudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.IndianStudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/IndianStudents",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.IndianStudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.IndianStudentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.IndianStudentRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/IndianStudents",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.IndianStudentBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.LeaveBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.LeaveRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Leaves",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Authority",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Unit",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JCCourse",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Absence",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Prefix",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Suffix",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "From",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "To",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Telephone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LeaveDays",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsApproved",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApprovedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RejectedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApprovedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AuthorityId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Remark",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApprovedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.LeaveBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.LeaveRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Leaves",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.LeaveBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.LeaveBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.LeaveRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Leaves",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.LeaveBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.LeaveBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.LeaveRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Leaves",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.LeaveBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.MaestrosController",
+    "Method": "GetMaestro",
+    "RelativePath": "api/Maestros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Alias",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DbSet",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SchemaName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ColumnValue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.MaestrosController",
+    "Method": "AddMaestroValue",
+    "RelativePath": "api/Maestros",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maestro",
+        "Type": "AWC_CMS.BO.MaestroBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.MaestrosController",
+    "Method": "UpdateMaestroValue",
+    "RelativePath": "api/Maestros",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maestro",
+        "Type": "AWC_CMS.BO.MaestroBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.MaestrosController",
+    "Method": "DeleteMaestroValue",
+    "RelativePath": "api/Maestros",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maestro",
+        "Type": "AWC_CMS.BO.MaestroBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.MaestrosController",
+    "Method": "GetMaestroDbSet",
+    "RelativePath": "api/Maestros/dbset",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Alias",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DbSet",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SchemaName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ColumnValue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.MedicalBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.MedicalRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Medicals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Issue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Diagnosis",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Temp",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pulse",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Respiration",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BloodPressure",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.MedicalBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.MedicalRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Medicals",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.MedicalBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.MedicalBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.MedicalRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Medicals",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.MedicalBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.MedicalBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.MedicalRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Medicals",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.MedicalBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.OfficerBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.OfficerRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Officers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Service",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DirectingStaff",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PostedTo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Initial",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubstRankId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubsRankDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ActRankId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ActRankDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegimentCorpId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CommissionTypeId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReligionId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CommissionDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateSen",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatefirstComm",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DOB",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Authority",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PlaceBirth",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nationality",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MotherTounge",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrevOccu",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CDAAcNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ICardNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdentMark",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MedicalId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BloodGroupId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateofPosting",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PermanentHouseNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PermanentVillage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PermanentPO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PermanentTehsil",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PermanentDist",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PermanentState",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PermanentNRS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JBankACNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SBankACNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JBankName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JBankAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JBankCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SBankName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SBankAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SBankCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NOKName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NOKRelationId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "NOKAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NOKBankAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WillExecuted",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WillLocation",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpouseNationalityBM",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateofMarriage",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PlaceofMarriage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Law",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToWhom",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpouseDOB",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MAuthority",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AcademicDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.AcademicDetailBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ChildrenDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.ChildrenDetailBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CourseDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.CourseDetailBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DecorationsDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.DecorationBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProfessionalQualificationsDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.ProfessionalTechnicalQualificationBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PromotionExaminationDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.PromotionExaminationDetailBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StaffEmploymentDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AWC_CMS.BO.PersonalServiceParticular.StaffEmploymentBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.OfficerBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.OfficerRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Officers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.OfficerBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.OfficerBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.OfficerRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Officers",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.OfficerBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.PersonalServiceParticular.OfficerBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.PersonalServiceParticular.OfficerRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Officers",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.PersonalServiceParticular.OfficerBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.RankBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.RankRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Ranks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RankName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RankType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Priority",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Comments",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Service",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.RankBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.RankRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Ranks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.RankBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.RankBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.RankRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Ranks",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.RankBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.RankBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.RankRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Ranks",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.RankBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.RanksController",
+    "Method": "GetRanksByType",
+    "RelativePath": "api/Ranks/by-type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.RanksController",
+    "Method": "GetRanksByTypeAndService",
+    "RelativePath": "api/Ranks/by-type-and-service",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "service",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.RanksController",
+    "Method": "GetDistinctRankServices",
+    "RelativePath": "api/Ranks/distinct-services",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.RanksController",
+    "Method": "GetDistinctRankTypesByService",
+    "RelativePath": "api/Ranks/distinct-types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "service",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.SyndicateBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.SyndicateRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Syndicates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DivisionId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SyndicateName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Strength",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.SyndicateBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.SyndicateRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Syndicates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.SyndicateBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.SyndicateBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.SyndicateRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Syndicates",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.SyndicateBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.SyndicateBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Master.SyndicateRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Syndicates",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.SyndicateBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.UnitBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.UnitRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Units",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UnitName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SUSNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "State",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PinCode",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TelNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NRS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Remarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.UnitBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.UnitRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Units",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.UnitBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.UnitBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.UnitRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Units",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.UnitBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.UnitBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.UnitRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Units",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.UnitBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.UserBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Account.UserRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CourseId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Mobile",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsApproved",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApprovedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApprovedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RejectedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Remark",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OfficerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "StudentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PersonalNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.UserBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Account.UserRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Add",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.UserBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.UserBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Account.UserRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Users",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.UserBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.GenBase.BaseApiController\u00602[[AWC_CMS.BO.UserBO, AWC_CMS.BO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[AWC_CMS.Repos.Account.UserRepo, AWC_CMS.Repos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Users",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.UserBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

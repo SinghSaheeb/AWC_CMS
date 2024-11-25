@@ -1,0 +1,112 @@
+﻿@page
+@{
+    ViewBag.Title = "Block";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Block",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Masters", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Block", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+@await Component.InvokeAsync("SectionTable", new
+{
+    sectionId = "Block",
+    buttonText = "Add Block",
+    tableHeaders = new List<string> {
+        "#",
+        "Division",
+        "Block Prefix",
+        "Block Number",
+        "MES Building Number",
+        "Accommodation Type",
+        "Living Capacity",
+        "Number of Quarters",
+        "Action"
+    }
+})
+
+<!-- Block Modal -->
+<div class="modal fade" id="blockModal" tabindex="-1" aria-labelledby="blockModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="blockModalLabel">Add/Edit Block</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="blockForm" class="row g-3">
+                    <input type="hidden" id="blockId" />
+                    @Html.AntiForgeryToken() <!-- CSRF Token -->
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <select id="divisionId" class="form-control" required>
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                            <label for="divisionId">Division</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <select id="blockPrefix" class="form-control" required>
+                                <option value="">Select</option>
+                                <option value="JC">JC</option>
+                                <option value="Fo">Fo</option>
+                                <option value="HKC">HKC</option>
+                                <option value="Others">Others</option>
+                            </select>
+                            <label for="blockPrefix">Block Prefix</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <input type="number" step="1" min="0" id="blockNumber" class="form-control" placeholder="" required />
+                            <label for="blockNumber">Block Number</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <input type="text" id="mesBuildingNumber" class="form-control" placeholder="" />
+                            <label for="mesBuildingNumber">MES Building Number</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <select id="accommodationType" class="form-control" required>
+                                <option value="">Select</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                            </select>
+                            <label for="accommodationType">Accommodation Type</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <input type="number" step="1" min="0" id="livingCapacity" class="form-control" placeholder="" required />
+                            <label for="livingCapacity">Living Capacity</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <input type="number" step="1" min="0" id="numberOfQuarters" class="form-control" placeholder="" required />
+                            <label for="numberOfQuarters">Number of Quarters</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/Masters/Block.cshtml.js")"></script>
+}

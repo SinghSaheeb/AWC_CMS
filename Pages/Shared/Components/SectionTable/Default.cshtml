@@ -1,0 +1,50 @@
+﻿@model AWC_CMS.BO.SectionTable.View
+@{
+    var addBtnId = string.Concat("add", Model.SectionId, "Btn");
+    var dataTableId = string.Concat(AWC_CMS.Utils.CaseConverter.ToCamelCase(Model.SectionId), "Table");
+} 
+
+<section class="section">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">&nbsp;</h5>
+            <div class="row">
+                <div class="col">
+                    @if (!string.IsNullOrEmpty(Model.ButtonText))
+                    {
+                        <button id="@addBtnId" 
+                            class="btn btn-primary"
+                            onclick="window.location.href='@Model.ButtonRedirectUrl'">
+                            <i class="bi bi-plus-circle"></i> @Model.ButtonText
+                        </button>
+                    }
+                </div>
+            </div>
+            <br />
+            <table class="@Model.TableClasses" id="@dataTableId" style="width:100%">
+                <thead>
+                    <tr>
+                        @foreach (var header in Model.TableHeaders)
+                        {
+                            <th>@header</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.TableRows != null && Model.TableRows.Any())
+                    {
+                        @foreach (var row in Model.TableRows)
+                        {
+                            <tr>
+                                @foreach (var cell in row)
+                                {
+                                    <td>@cell</td>
+                                }
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+﻿.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    z-index: 9999; /* Ensures alert is on top of everything */
+    min-width: 300px; /* Minimum width */
+    max-width: 80%; /* Max width for large screens */
+    text-align: center;
+    word-wrap: break-word; /* Ensure long text breaks into next line */
+    height: auto; /* Adjust height based on content */
+    line-height: 1.5; /* Adjust line height for better readability */
+}

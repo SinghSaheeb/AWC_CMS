@@ -1,0 +1,421 @@
+﻿@page
+@{
+    ViewBag.Title = "Indian Student";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Indian",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "HR", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Personal & Service Particulars", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Student", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Indian", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+<section class="section">
+    <div class="row align-items-top">
+        <div class="col-lg-12">
+            <form id="IndianStudentForm">
+                @Html.AntiForgeryToken() <!-- CSRF Token -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Personal Information
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtPersonalNumber" name="persNo" class="form-control is-invalid" placeholder="" required maxlength="10" />
+                                    <label for="txtPersonalNumber">Personal Number</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("Rank", new { selectId = "ddlRank", isRequired = true, isInvalid = true })
+                                    <label for="ddlGender">Rank</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtFullName" name="name" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtFullName">Name</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtDecoration" name="decoration" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtDecoration">Decoration</label>
+                                    <div class="invalid-feedback">
+                                        Don't mention Commendation card
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Gender", selectId = "ddlGender", isRequired = true, isInvalid = true })
+                                    <label for="ddlGender">Gender</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="date" id="dtDateOfBirth" name="dateOfBirth" class="form-control is-invalid" placeholder="" required />
+                                    <label for="dtDateOfBirth">Date of Birth</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="card-title">
+                            Service Information
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="date" id="dtDateOfCommission" name="dateOfCommission" class="form-control is-invalid" placeholder="" required />
+                                    <label for="dtDateOfCommission">Date of Commission</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="date" id="dtDateOfSeniority" name="dateOfSeniority" class="form-control is-invalid" placeholder="" required />
+                                    <label for="dtDateOfSeniority">Date of Seniority</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Line Directorate", selectId = "ddlLineDirectorate", isRequired = true, isInvalid = true })
+                                    <label for="ddlLineDirectorate">Line Directorate</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Military Unit", selectId = "ddlMilitaryUnit", isRequired = true, isInvalid = true })
+                                    <label for="ddlMilitaryUnit">Arms/Service</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Regiment Corp", selectId = "ddlRegimentCorp", isRequired = true, isInvalid = true })
+                                    <label for="ddlRegimentCorp">Regt for Inf & TA only</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row" id="gorkhaRegimentContainer" style="display:none;">
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Gorkha Regiment", selectId = "ddlGorkhaRegiment" })
+                                    <label for="ddlGorkhaRegiment">Gorkha Regiment</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="card-title">
+                            Presently Posting Information
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Terrain", selectId = "ddlTerrain", isRequired = true, isInvalid = true })
+                                    <label for="ddlTerrain">Terrains &amp; Operational areas</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Special Force", selectId = "ddlSpecialForce", isRequired = true, isInvalid = true })
+                                    <label for="ddlSpecialForce">Special Force</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Rashtriya Rifle", selectId = "ddlRashtriyaRifle", isRequired = false, isInvalid = false })
+                                    <label for="ddlRashtriyaRifle">Rashtriya Rifle</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Central Base Post Office", selectId = "ddlCentralBasePostOffice", isRequired = true, isInvalid = true })
+                                    <label for="ddlCentralBasePostOffice">Central Base Post Office</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtPresentUnit" name="presentUnit" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtPresentUnit">Present Unit</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtParentUnit" name="parentUnit" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtParentUnit">Parent Unit</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <textarea type="text" id="txtPostalAddress" name="postalAddress" class="form-control is-invalid" placeholder="" required maxlength="255"></textarea>
+                                    <label for="txtPostalAddress">Postal Address</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" id="txtArmyPinCode" name="armyPinCode" class="form-control is-invalid" placeholder="" required maxlength="6" min="0" max="999999" />
+                                    <label for="txtArmyPinCode">Army PIN Code</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtBrigadeHeadquarter" name="BrigadeHeadquarter" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtBrigadeHeadquarter">Brigade Headquarter</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtDivisionHeadquarter" name="DivisionHeadquarter" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtDivisionHeadquarter">Division Headquarter</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtCorpsHeadquarter" name="CorpsHeadquarter" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtCorpsHeadquarter">Corps Headquarter</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtCommandHeadquarter" name="CommandHeadquarter" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtCommandHeadquarter">Command Headquarter</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="card-title">
+                            Identification Officer Information
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtNameOfIO" name="NameOfIO" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtNameOfIO">Name of IO</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtNameOfRO" name="NameOfRO" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtNameOfRO">Name of RO</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtNameOfSRO" name="NameOfSRO" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtNameOfSRO">Name of SRO</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtCdaAcNumber" name="cdaAcNumber" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtCdaAcNumber">CDA A/c Number</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Medical", selectId = "ddlMedicalCategory", isRequired = true, isInvalid = true })
+                                    <label for="ddlMedicalCategory">Medical Category</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" id="txtMobileNumber" name="mobileNumber" class="form-control is-invalid" placeholder="" required maxlength="15" min="0" max="999999999999999" />
+                                    <label for="txtMobileNumber">Mobile Number</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="card-title">
+                            Exam Information
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <select id="ddlAttendee" name="attendee" class="form-select is-invalid" required>
+                                        <option value="">Select</option>
+                                        <option value="Fresher">Fresher</option>
+                                        <option value="Repeater">Repeater</option>
+                                    </select>
+                                    <label for="ddlAttendee">Attendee</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <label for="PartBExamPass">Part B Exam Pass</label>
+                                <br />
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="PartBExamPass" value="true" id="rbPartBExamPassYes" required />
+                                    <label class="form-check-label" for="rbPartBExamPassYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="PartBExamPass" value="false" id="rbPartBExamPassNo" required />
+                                    <label class="form-check-label" for="rbPartBExamPassNo">No</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="PartDExamPass">Part D Exam Pass</label>
+                                <br />
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="PartDExamPass" value="true" id="rbPartDExamPassYes" required />
+                                    <label class="form-check-label" for="rbPartDExamPassYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="PartDExamPass" value="false" id="rbPartDExamPassNo" required />
+                                    <label class="form-check-label" for="rbPartDExamPassNo">No</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="DsscExamPass">DSSC Exam Pass</label>
+                                <br />
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="DsscExamPass" value="true" id="rbDsscExamPassYes" required />
+                                    <label class="form-check-label" for="rbDsscExamPassYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="DsscExamPass" value="false" id="rbDsscExamPassNo" required />
+                                    <label class="form-check-label" for="rbDsscExamPassNo">No</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="DstscExamPass">DSTSC Exam Pass</label>
+                                <br />
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="DstscExamPass" value="true" id="rbDstscExamPassYes" required />
+                                    <label class="form-check-label" for="rbDstscExamPassYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="DstscExamPass" value="false" id="rbDstscExamPassNo" required />
+                                    <label class="form-check-label" for="rbDstscExamPassNo">No</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="AlmcExamPass">ALMC Exam Pass</label>
+                                <br />
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="AlmcExamPass" value="true" id="rbAlmcExamPassYes" required />
+                                    <label class="form-check-label" for="rbAlmcExamPassYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="AlmcExamPass" value="false" id="rbAlmcExamPassNo" required />
+                                    <label class="form-check-label" for="rbAlmcExamPassNo">No</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="IscExamPass">ISC Exam Pass</label>
+                                <br />
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="IscExamPass" value="true" id="rbIscExamPassYes" required />
+                                    <label class="form-check-label" for="rbIscExamPassYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" name="IscExamPass" value="false" id="rbIscExamPassNo" required />
+                                    <label class="form-check-label" for="rbIscExamPassNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="card-title">
+                            Next of Kin Information
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtNextKinName" name="nextKinName" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtNextKinName">Name</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Relationship", selectId = "ddlRelationship", isRequired = true, isInvalid = true })
+                                    <label for="ddlRelationship">Relationship</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" id="txtContactNumber" name="ContactNumber" class="form-control is-invalid" placeholder="" required maxlength="15" min="0" max="999999999999999" />
+                                    <label for="txtContactNumber">Contact Number</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="card-title">
+                            Spouse Information
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtSpouseName" name="SpouseName" class="form-control" placeholder="" maxlength="50" />
+                                    <label for="txtSpouseName">Name of Spouse</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtSpouseOccupation" name="SpouseOccupation" class="form-control" placeholder="" maxlength="50" />
+                                    <label for="txtSpouseOccupation">Occupation of Spouse</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <select id="ddlOccupationNature" name="attendee" class="form-select">
+                                        <option value="">Select</option>
+                                        <option value="Full time">Full time</option>
+                                        <option value="Part time">Part time</option>
+                                    </select>
+                                    <label for="ddlOccupationNature">Nature of Occupation</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="card-title">
+                            Check-In Details
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input class="form-control is-invalid" placeholder="" type="datetime-local" id="dtDatetimeOfArrival" required name="dateOfArrival" />
+                                    <label for="dtDatetimeOfArrival">Date & Time of Arrival</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <!-- Save and Reset Buttons aligned left -->
+                            <div class="col">
+                                <button class="btn btn-primary me-2" id="saveBtn" type="submit" title="Save">
+                                    <i class="bi bi-save"></i> Save
+                                </button>
+                                <button class="btn btn-secondary" id="resetBtn" title="Reset" onclick="location.reload();">
+                                    <i class="bi bi-arrow-clockwise"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    <script src="@Url.Content("~/Pages/HR/PersonalServiceParticulars/Students/Indian.cshtml.js")"></script>
+}

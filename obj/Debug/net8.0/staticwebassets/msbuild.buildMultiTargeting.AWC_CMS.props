@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AWC_CMS.props" />
+</Project>

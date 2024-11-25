@@ -1,0 +1,366 @@
+﻿@page
+@using AWC_CMS.Hndls
+@inject SessUser SessUser
+@{
+    // ViewBag.Title = "LeaveApplication";
+    // SessUser.PersNo = "IC12345A";
+    // SessUser.Id = "Col.Major";
+    // SessUser.Name = "Maj Karnal";
+    // SessUser.Role = "DirectingStaff";
+    SessUser.Rank = "Major";
+    SessUser.Unit = "JCUnit";
+    // SessUser.Course = "JC";
+}
+
+<div class="pagetitle">
+    <h1>LeaveApplication</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/Dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item">Leave</li>
+            <li class="breadcrumb-item active">LeaveApplication</li>
+        </ol>
+    </nav>
+</div>
+<section class="section">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">&nbsp;</h5>
+            <div class="row">
+                <div class="col">
+                    <button id="addLeaveBtn" class="btn btn-primary"><i class="bi bi-plus-circle"></i></button>
+                </div>
+
+            </div>
+            <br />
+            <table class="table table-bordered border-primary" id="LeaveApprovalTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Personal Number</th>
+                        <th>Absence</th>
+                        <th>From Date</th>
+                        <th>To Date</th>
+                        <th>Directing Staff</th>
+                        <th>Senior Instructor</th>
+                        <th>Chief Instructor</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content will be appended here -->
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="LeaveModal" tabindex="-1" aria-labelledby="LeaveModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="LeaveModalLabel">Add/Edit Leave</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="LeaveForm" class="row g-3">
+                    <input type="hidden" id="Id" />
+                    @Html.AntiForgeryToken()
+@*                     <li class="list-group-item"><i class="bi bi-person-badge me-1 text-primary"></i> 
+    <b>Personal Number:</b> <label id="lblPersonalNumber">@sessUser.PersNo</label></li>
+ *@
+                    <!-- Left Column -->
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i class="bi bi-person-badge me-1 text-primary"></i>
+                                <b>Personal Number:</b>
+                                <label id="lblPersonalNumber">@SessUser.PersNo</label>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-award me-1 text-primary"></i>
+                                <b>Rank:</b>
+                                <label id="txtRank">@SessUser.Rank</label>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-person me-1 text-primary"></i>
+                                <b>Name:</b>
+                                <label id="txtName">@SessUser.Name</label>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-building me-1 text-primary"></i>
+                                <b>Present Unit:</b>
+                                <label id="txtUnit">@SessUser.Unit</label>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-book me-1 text-primary"></i>
+                                <b>Course:</b>
+                                <label id="txtJCCourse">@SessUser.Course</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-md-6">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="ddlAbsence">
+                                        <option value="">Select</option>
+                                        <option value="1">Casual</option>
+                                        <option value="2">Annual</option>
+                                        <option value="3">Furlough</option>
+                                    </select>
+                                    <label for="ddlAbsence">Absence</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="txtPrefix" placeholder=" ">
+                                    <label for="txtPrefix">Prefix</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="txtSuffix" placeholder=" ">
+                                    <label for="txtSuffix">Suffix</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="txtfrom" placeholder=" ">
+                                    <label for="txtfrom">From</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="txtTo" placeholder=" ">
+                                    <label for="txtTo">To</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="txtAddress" maxlength="300" placeholder=" " style="height: 100px;"></textarea>
+                                    <label for="txtAddress">Address</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="txtTelephone"  maxlength="15" placeholder=" ">
+                                    <label for="txtTelephone">Telephone</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="txtleave" maxlength="100" placeholder=" ">
+                                    <label for="txtleave">Days Casual Leave</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Buttons -->
+                    <div class="col-12 text-end">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script src="~/js/formUtils.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // Initialize DataTable
+            $('#LeaveTable').DataTable({
+                paging: true,
+                searching: true,
+                ordering: true
+            });
+
+            // Load course on page load
+            loadUsers();
+
+            function loadUsers() {
+                $.ajax({
+                    url: '/api/Leaves', // Adjust the endpoint as needed
+                    type: 'GET',
+                    headers: {
+                        'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (data) {
+                        $('#LeaveApprovalTable tbody').empty();
+
+                        $.each(data, function (index, user) {
+                            var $row = $('<tr>');
+                            $row.append($('<td>').text(index + 1)); // Serial Number
+                            $row.append($('<td>').text(user.PersonalNumber)); // Personal Number
+                            $row.append($('<td>').text(user.Absence)); // Absence
+                            $row.append($('<td>').text(new Date(user.FromDate).toLocaleDateString())); // From Date
+                            $row.append($('<td>').text(new Date(user.ToDate).toLocaleDateString())); // To Date
+                            
+                            // Directing Staff Status
+                            if (user.DirectingStaff === null) {
+                                $row.append($('<td>').html('<span class="badge bg-secondary">Pending</span>'));
+                            } else {
+                                if (user.DirectingStaff && user.DirectingStaffSig) {
+                                    $row.append($('<td>').html('<span class="badge bg-success">Approved</span>'));
+                                } else {
+                                    $row.append($('<td>').html('<span class="badge bg-danger">Rejected</span>'));
+                                }
+                            }
+
+                            // SeniorInstructor Staff Status
+                            if (user.SeniorInstructor === null) {
+                                $row.append($('<td>').html('<span class="badge bg-secondary">Pending</span>'));
+                            } else {
+                                if (user.SeniorInstructor && user.SeniorInstructorSig) {
+                                    $row.append($('<td>').html('<span class="badge bg-success">Approved</span>'));
+                                } else {
+                                    $row.append($('<td>').html('<span class="badge bg-danger">Rejected</span>'));
+                                }
+                            }
+
+                            // ChiefInstructor Staff Status
+                            if (user.ChiefInstructor === null) {
+                                $row.append($('<td>').html('<span class="badge bg-secondary">Pending</span>'));
+                            } else {
+                                if (user.ChiefInstructor && user.ChiefInstructorSig) {
+                                    $row.append($('<td>').html('<span class="badge bg-success">Approved</span>'));
+                                } else {
+                                    $row.append($('<td>').html('<span class="badge bg-danger">Rejected</span>'));
+                                }
+                            }
+
+                            // Action / Status Column (Delete Button Only)
+                            var $deleteButton = $('<button>')
+                                .addClass('btn btn-danger btn-sm') // Small red button
+                                .attr('data-id', user.Id)
+                                .html('<i class="bi bi-trash"></i>') // Add an icon and text
+                                .on('click', function () {
+                                    handleDelete($(this).data('id'));
+                                });
+
+                           
+                            $row.append($('<td>').append($deleteButton));
+                            $('#LeaveApprovalTable tbody').append($row);
+                        });
+                    },
+                    error: function (error) {
+                        console.error("Error fetching data:", error);
+                    }
+                });
+            }
+
+            // Show modal for adding a new Leave
+            $('#addLeaveBtn').click(function () {
+                $('#LeaveForm')[0].reset();
+                $('#Id').val('');
+                $('#LeaveModalLabel').text('Add Leave');
+                $('#LeaveModal').modal('show');
+            });
+
+            // Handle form submission for adding/editing a Leave
+            $('#LeaveForm').submit(function (event) {
+                event.preventDefault();
+
+                var id = $('#Id').val();
+                var personalNumber = $('#lblPersonalNumber').val();
+                 var rank = $('#txtRank').val();
+                var name = $('#txtName').val();
+                var unit = $('#txtUnit').val();
+                var jccourse = $('#txtJCCourse').val();
+                var absence = $('#ddlAbsence :selected').text();
+                var prefix = $('#txtPrefix').val();
+                var suffix = $('#txtSuffix').val();
+                var from = $('#txtfrom').val();
+                var to = $('#txtTo').val();
+                var address = $('#txtAddress').val();
+                var tel = $('#txtTelephone').val();
+                var leave = $('#txtleave').val();
+                var actionUrl = '/api/Leaves';
+                var actionType = id ? 'PUT' : 'POST';
+                
+                $.ajax({
+                    url: actionUrl,
+                    type: actionType,
+                    contentType: 'application/json',
+                    headers: {
+                        'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    data: JSON.stringify({
+                        PersonalNumber: personalNumber,
+                        Rank: rank,
+                        Name: name,
+                        Unit: unit,
+                        JCCourse: jccourse,
+                        Absence: absence,
+                        Prefix: prefix,
+                        Suffix: suffix,
+                        From: from,
+                        To: to,
+                        Address: address,
+                        Telephone: tel,
+                        LeaveDays: leave
+                    }),
+                    
+                    success: function (response) {
+                        alert(response.message, id ? 'info' : 'success');
+                        $('#LeaveModal').modal('hide');
+                        loadUsers(); // Reload Leave list or table
+                    },
+                    // console.log(data)
+                    error: function (error) {
+                        alert("Error saving Leave: " + error.responseText, 'error');
+                    }
+                });
+            });
+
+            // Handle delete button click
+            function handleDelete(id) {
+                if (!id) {
+                    console.error("Invalid ID provided for deletion.");
+                    return;
+                }
+
+                // Show confirmation prompt
+                const isConfirmed = confirm("Are you sure you want to delete this Application?");
+                if (!isConfirmed) {
+                    console.log("Deletion canceled by the user.");
+                    return;
+                }
+
+                // Create the object to send to the backend
+                const obj = { Id: id };
+
+                $.ajax({
+                    url: `/api/Leaves`,
+                    type: 'DELETE',
+                    contentType: 'application/json',
+                    data: JSON.stringify(obj), // Send the object as JSON
+                    success: function (response) {
+                        console.log("Delete successful:", response);
+
+                        // Optionally, remove the row from the table
+                        $(`#LeaveApprovalTable button[data-id="${id}"]`).closest('tr').remove();
+                    },
+                    error: function (xhr) {
+                        console.error("Error deleting data:", xhr.responseText || xhr.statusText);
+                    }
+                });
+            }
+
+
+        });
+
+    </script>
+}

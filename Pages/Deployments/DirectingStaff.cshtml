@@ -1,0 +1,109 @@
+﻿@page
+@{
+    ViewBag.Title = "Directing Staff";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Directing Staff",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Deployments", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Directing Staff", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+<section class="section">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">&nbsp;</h5>
+            <div class="row">
+                <div class="col">
+                    <button id="addDeploymentDirectingStaffBtn" class="btn btn-primary"><i class="bi bi-plus-circle"></i></button>
+                </div>
+
+            </div>
+            <br />
+            <table class="display compact nowrap" id="deploymentDirectingStaffTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Training Year</th>
+                        <th>Course</th>
+                        <th>Tutorial</th>
+                        <th>Division</th>
+                        <th>Syndicate</th>
+                        <th>Directing Staff</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Directing Staff Modal -->
+<div class="modal fade" id="directingStaffModal" tabindex="-1" aria-labelledby="directingStaffModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="directingStaffModalLabel">Add/Edit Base Course</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="deploymentDirectingStaffForm" class="row g-3">
+                    <input type="hidden" id="directingStaffId" />
+                    @Html.AntiForgeryToken() <!-- CSRF Token -->
+                    <div class="col-6">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Training Year", selectId = "ddlTrainingYear", isRequired = true, isInvalid = true })
+                            <label for="ddlTrainingYear">Training Year</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Base Course", selectId = "ddlCourse", isRequired = true, isInvalid = true })
+                            <label for="ddlCourse">Course</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Tutorial", selectId = "ddlTutorial", isRequired = true, isInvalid = true })
+                            <label for="ddlTutorial">Tutorial</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("Division", new { selectId = "ddlDivision", isRequired = true, isInvalid = true })
+                            <label for="ddlDivision">Division</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("Syndicate", new { selectId = "ddlSyndicate", isRequired = true, isInvalid = true })
+                            <label for="ddlDivision">Syndicate</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("Staff", new { selectId = "ddlDirectingStaff", isRequired = true, isInvalid = true, userRole = "Directing Staff" })
+                            <label for="ddlSeniorInstructor">Directing Staff</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/Deployments/DirectingStaff.cshtml.js")"></script>
+}

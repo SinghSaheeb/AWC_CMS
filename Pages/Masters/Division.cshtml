@@ -1,0 +1,65 @@
+﻿@page
+@{
+    ViewBag.Title = "Division";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Division",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Masters", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Division", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+@await Component.InvokeAsync("SectionTable", new
+{
+    sectionId = "Division",
+    buttonText = "Add Division",
+    tableHeaders = new List<string> {
+        "#",
+        "Wing",
+        "Division",
+        "Action"
+    }
+})
+
+<!-- Division Modal -->
+<div class="modal fade" id="divisionModal" tabindex="-1" aria-labelledby="divisionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="divisionModalLabel">Add/Edit Division</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="divisionForm" class="row g-3">
+                    <input type="hidden" id="divisionId" />
+                    @Html.AntiForgeryToken() <!-- CSRF Token -->
+                    <div class="col-12">
+                        <div class="form-floating">
+                            @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Wing", selectId = "wingId", isRequired = true, isInvalid = true })
+                            <label for="wingId">Wing</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="text" id="divisionName" class="form-control is-invalid" placeholder="" required />
+                            <label for="divisionName">Division Name</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/Masters/Division.cshtml.js")"></script>
+}

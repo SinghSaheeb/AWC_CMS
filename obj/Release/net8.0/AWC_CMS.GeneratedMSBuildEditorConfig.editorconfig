@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AWC_CMS
+build_property.RootNamespace = AWC_CMS
+build_property.ProjectDir = D:\Projects\AWC_CMS_2.0\AWC_CMS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Projects\AWC_CMS_2.0\AWC_CMS
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Account/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Deployments/DirectingStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwbG95bWVudHNcRGlyZWN0aW5nU3RhZmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Deployments/SeniorInstructor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwbG95bWVudHNcU2VuaW9ySW5zdHJ1Y3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Deployments/Student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwbG95bWVudHNcU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/HR/Masters/Rank.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcTWFzdGVyc1xSYW5rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/HR/Masters/Unit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcTWFzdGVyc1xVbml0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/HR/PersonalServiceParticulars/Officers/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcUGVyc29uYWxTZXJ2aWNlUGFydGljdWxhcnNcT2ZmaWNlcnNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/HR/PersonalServiceParticulars/Officers/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcUGVyc29uYWxTZXJ2aWNlUGFydGljdWxhcnNcT2ZmaWNlcnNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/HR/PersonalServiceParticulars/Students/Foreign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcUGVyc29uYWxTZXJ2aWNlUGFydGljdWxhcnNcU3R1ZGVudHNcRm9yZWlnbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/HR/PersonalServiceParticulars/Students/Indian.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcUGVyc29uYWxTZXJ2aWNlUGFydGljdWxhcnNcU3R1ZGVudHNcSW5kaWFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/HR/PersonalServiceParticulars/Students/Indians/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcUGVyc29uYWxTZXJ2aWNlUGFydGljdWxhcnNcU3R1ZGVudHNcSW5kaWFuc1xMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Leave/ApprovalLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhdmVcQXBwcm92YWxMZWF2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Leave/LeaveApplication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVhdmVcTGVhdmVBcHBsaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Masters/BaseCourseTenure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzdGVyc1xCYXNlQ291cnNlVGVudXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Masters/Block.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzdGVyc1xCbG9jay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Masters/Division.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzdGVyc1xEaXZpc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Masters/Maestro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzdGVyc1xNYWVzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Masters/Syndicate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzdGVyc1xTeW5kaWNhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Medicals/HealthConcern.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWNhbHNcSGVhbHRoQ29uY2Vybi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Medicals/PatientIssue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkaWNhbHNcUGF0aWVudElzc3VlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/Components/Breadcrumb/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcQnJlYWRjcnVtYlxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/Components/Division/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcRGl2aXNpb25cRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/Components/MaestroDropdown/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcTWFlc3Ryb0Ryb3Bkb3duXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/Components/Rank/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcUmFua1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/Components/SectionTable/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcU2VjdGlvblRhYmxlXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/Components/Staff/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcU3RhZmZcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/Components/Syndicate/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcU3luZGljYXRlXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/Components/Unit/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcVW5pdFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Users/Approval.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcQXBwcm92YWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Users/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/_AuthLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BdXRoTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-jqebtsyvb9
+
+[D:/Projects/AWC_CMS_2.0/AWC_CMS/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ngwd18ldch

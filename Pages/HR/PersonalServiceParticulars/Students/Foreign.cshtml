@@ -1,0 +1,310 @@
+﻿@page
+@{
+    ViewBag.Title = "Foreign Student";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Foreign",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "HR", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Personal & Service Particulars", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Student", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Foreign", Url = "javascript:void(0)", IsActive = true }
+    }
+})
+
+<section class="section">
+    <div class="row align-items-top">
+        <div class="col-lg-12">
+            <form id="ForeignStudentForm">
+                @Html.AntiForgeryToken() <!-- CSRF Token -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Personal Information
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtPersonalNumber" name="persNo" class="form-control is-invalid" placeholder="" required maxlength="10" />
+                                    <label for="txtPersonalNumber">Personal Number</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Country", selectId = "ddlCountry", isRequired = true, isInvalid = true })
+                                    <label for="ddlCountry">Country</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtFullName" name="name" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtFullName">Name</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtShortName" name="shortName" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtShortName">During the JC Course you wish to be addressed as</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtRank" name="rank" class="form-control is-invalid" placeholder="" required maxlength="10" />
+                                    <label for="txtRank">Rank</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtDecoration" name="decoration" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtDecoration">Decoration</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="date" id="dtDateOfBirth" name="dateOfBirth" class="form-control is-invalid" placeholder="" required />
+                                    <label for="dtDateOfBirth">Date of Birth</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="date" id="dtDateOfCommission" name="dateOfCommission" class="form-control is-invalid" placeholder="" required />
+                                    <label for="dtDateOfCommission">Date of Commission</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    @await Component.InvokeAsync("MaestroDropdown", new { viewType = "Military Unit", selectId = "ddlMilitaryUnit", isRequired = true, isInvalid = true })
+                                    <label for="ddlMilitaryUnit">Arms/Service</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtPresentUnit" name="presentUnit" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtPresentUnit">What is your Present Unit / Headquarter?</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtMedicalCategory" name="medicalCategory" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtMedicalCategory">Medical Category</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtTelephoneNumber" name="telephoneNumber" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtTelephoneNumber">Telephone Number (Home Country)</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="email" id="txtEmail" name="email" class="form-control is-invalid" placeholder="" required maxlength="100" />
+                                    <label for="txtEmail">Email</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtRoomNumberAWC" name="roomNumberAWC" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtRoomNumberAWC">Room Number (AWC)</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtTelephoneNumberAWC" name="telephoneNumberAWC" class="form-control is-invalid" placeholder="" required maxlength="50" />
+                                    <label for="txtTelephoneNumberAWC">Telephone Number (AWC)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="card-title">
+                            Course Details
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control is-invalid" id="txtCourse" name="course" maxlength="50" placeholder="">
+                                    <label for="txtCourse">Course</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <textarea class="form-control is-invalid" id="txtLocation" maxlength="255" placeholder=""></textarea>
+                                    <label for="txtLocation">Location</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <button id="addCourseBtn" class="btn btn-primary btn-lg" type="button" onclick="addCourseDetails()"><i class="bi bi-plus-circle"></i></button>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <table class="table table-bordered border-primary" id="CourseDetailsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Course</th>
+                                            <th>Location</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dynamic content -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <h5 class="card-title">
+                            Family Details
+                        </h5>
+                        <div class="row">
+                            <div class="col-12">
+                                <label>Marital Status:</label>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" id="rdSingle" name="dsopFund" value="single" required>
+                                    <label class="form-check-label" for="rdSingle">Single</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" id="rdMarried" name="dsopFund" value="married" required>
+                                    <label class="form-check-label" for="rdMarried">Married</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" id="rdWidower" name="dsopFund" value="widower" required>
+                                    <label class="form-check-label" for="rdWidower">Widower</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input is-invalid" id="rdDivorce" name="dsopFund" value="divorce" required>
+                                    <label class="form-check-label" for="rdDivorce">Divorce</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <!-- Wife's details section (initially hidden) -->
+                        <div class="row" id="wifeDetails" style="display: none;">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="txtWifeName" name="wifeName" maxlength="50" placeholder="">
+                                    <label for="txtWifeName">Wife's Name:</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="dtWifeDob" name="wifeDob">
+                                    <label for="dtWifeDob">Wife's Date of Birth:</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control is-invalid" id="txtChildName" placeholder="">
+                                    <label for="txtChildName">Child's Name</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control is-invalid" id="dtChildDateOfBirth" placeholder="">
+                                    <label for="dtChildDateOfBirth">Date of Birth</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <select class="form-select is-invalid" id="ddlGender">
+                                        <option value="">Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                    <label for="ddlGender">Gender</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <button id="addChildrenDetailsBtn" class="btn btn-primary btn-lg" onclick="addChildrenDetails()">
+                                    <i class="bi bi-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <table class="table table-bordered border-primary" id="ChildrenDetailsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Child Name</th>
+                                            <th>Gender</th>
+                                            <th>Date of Birth</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dynamic content -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <textarea type="text" id="txtNextOfKinAddress" name="decoration" class="form-control is-invalid" required maxlength="255"></textarea>
+                                    <label for="txtNextOfKinAddress">Next of Kin's Address</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="card-title">
+                            Any Special Talent
+                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtSelfTalent" name="selfTalent" class="form-control is-invalid" required maxlength="10" />
+                                    <label for="txtSelfTalent">Self</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" id="txtWifeTalent" name="wifeTalent" class="form-control" maxlength="10" />
+                                    <label for="txtWifeTalent">Wife (If in Station)</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input class="form-control" placeholder="" type="datetime-local" id="dtDatetimeOfArrival" required name="dateOfArrival" />
+                                    <label for="dtDatetimeOfArrival">Date & Time of Arrival</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <!-- Save and Reset Buttons aligned left -->
+                            <div class="col">
+                                <button class="btn btn-primary me-2" id="saveBtn" type="submit" title="Save">
+                                    <i class="bi bi-save"></i> Save
+                                </button>
+                                <button class="btn btn-secondary" id="resetBtn" title="Reset" onclick="location.reload();">
+                                    <i class="bi bi-arrow-clockwise"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/HR/PersonalServiceParticulars/Students/Foreign.cshtml.js")"></script>
+}

@@ -1,0 +1,345 @@
+﻿@inject SessUser sessUser
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - AWC_CMS</title>
+
+    <!-- Favicons -->
+    <link href="~/img/favicon.png" rel="icon">
+    <link href="~/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+
+    <!-- Other CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/custom-alert.css" rel="stylesheet" />
+
+    <!-- DataTables CSS -->
+    <link href="@Url.Content("~/vendor/dataTables/datatables.min.css")" rel="stylesheet" />
+</head>
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="/Dashboard" class="logo d-flex align-items-center">
+                <img src="~/img/logo.png" alt="" />
+                <span class="d-none d-lg-block">AWC-CMS</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+        <!-- End Logo -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="~/img/avatar-admin.png" alt="Profile" class="rounded-circle">
+                        
+                        @if (string.IsNullOrEmpty(sessUser.Name))
+                        {
+                            Context.Response.Redirect("/Login"); // Replace with your actual login page URL
+                        }
+                        else
+                        {
+                            <span class="d-none d-md-block dropdown-toggle ps-2">@sessUser.Name</span>
+                        }
+                    </a>
+                    <!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>@sessUser.Rank</h6>
+                            <span>@sessUser.Email</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/Users/Profile">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a href="/Login" class="dropdown-item d-flex align-items-center">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav>
+        <!-- End Icons Navigation -->
+
+    </header>
+    <!-- End Header -->
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <div id="menuContainer"></div>
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Dashboard">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#masters-nav" data-bs-toggle="collapse" href="javascript:void(0)" aria-expanded="true">
+                    <i class="bi bi-menu-button-wide"></i>
+                    <span>Masters</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="masters-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style="">
+                    <li>
+                        <a class="nav-link collapsed" href="/Masters/Maestro">
+                            <i class="bi bi-circle"></i><span>Maestro</span>
+                        </a>
+                    </li>
+                    <li class="nav-heading">Tract</li>
+                    <li>
+                        <a class="nav-link collapsed" href="/Masters/Division">
+                            <i class="bi bi-circle"></i><span>Division</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" href="/Masters/Syndicate">
+                            <i class="bi bi-circle"></i><span>Syndicate</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" href="/Masters/Block">
+                            <i class="bi bi-circle"></i><span>Block</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Masters/BaseCourseTenure" class="nav-link collapsed">
+                            <i class="bi bi-circle"></i><span>Base Course Tenure</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+            <!-- End Masters Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#hr-nav" data-bs-toggle="collapse" href="javascript:void(0)" aria-expanded="true">
+                    <i class="bi bi-hr"></i>
+                    <span>HR</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="hr-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style="">
+                    <li>
+                        <a class="nav-link collapsed" href="/HR/Masters/Rank">
+                            <i class="bi bi-circle"></i><span>Rank</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" href="/HR/Masters/Unit">
+                            <i class="bi bi-circle"></i><span>Unit</span>
+                        </a>
+                    </li>
+                    <li class="nav-heading">Personal &amp; Service Particulars</li>
+                    <li>
+                        <a class="nav-link collapsed" href="/HR/PersonalServiceParticulars/Officers/List">
+                            <i class="bi bi-circle"></i><span>Officer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" href="/HR/PersonalServiceParticulars/Students/Indian">
+                            <i class="bi bi-circle"></i><span>Indian Student</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" href="/HR/PersonalServiceParticulars/Students/Foreign">
+                            <i class="bi bi-circle"></i><span>Foreign Student</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End HR Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#deployments-nav" data-bs-toggle="collapse" href="javascript:void(0)" aria-expanded="true">
+                    <i class="bi bi-layer-forward"></i>
+                    <span>Deployments</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="deployments-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style="">
+                    <li>
+                        <a href="/Deployments/SeniorInstructor">
+                            <i class="bi bi-circle"></i><span>Senior Instructor</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Deployments/DirectingStaff">
+                            <i class="bi bi-circle"></i><span>Directing Staff</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Deployments/Student">
+                            <i class="bi bi-circle"></i><span>Student</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Deployments Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Leave-nav" data-bs-toggle="collapse" href="javascript:void(0)" aria-expanded="true">
+                    <i class="bi bi-layer-forward"></i>
+                    <span>Leave</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Leave-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style="">
+                    <li>
+                        <a href="/Leave/LeaveApplication">
+                            <i class="bi bi-circle"></i><span>Leave Form</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Leave/ApprovalLeave">
+                            <i class="bi bi-circle"></i><span>Leave Approval Form</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Leave Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#users-nav" data-bs-toggle="collapse" href="javascript:void(0)" aria-expanded="true">
+                    <i class="bi bi-people"></i>
+                    <span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="users-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style="">
+                    <li>
+                        <a href="/Users/Approval">
+                            <i class="bi bi-circle"></i><span>Approval</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Users Nav -->
+
+           @*  <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#leaves-nav" data-bs-toggle="collapse" href="javascript:void(0)" aria-expanded="true">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>Leaves</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="leaves-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style="">
+                    <li>
+                        <a href="/Leaves/Application">
+                            <i class="bi bi-circle"></i><span>Application</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Leaves/Approval">
+                            <i class="bi bi-circle"></i><span>Approval</span>
+                        </a>
+                    </li>
+                </ul>
+            </li> *@
+            <!-- End Leaves Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#medicals-nav" data-bs-toggle="collapse" href="javascript:void(0)" aria-expanded="true">
+                    <i class="bi bi-journal-medical"></i>
+                    <span>Medicals</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="medicals-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav" style="">
+                    <li>
+                        <a href="/Medicals/HealthConcern">
+                            <i class="bi bi-circle"></i><span>Health Concern</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Medicals/PatientIssue">
+                            <i class="bi bi-circle"></i><span>Patient Issue</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Medicals Nav -->
+
+        </ul>
+
+    </aside>
+    <!-- End Sidebar-->
+
+    <main id="main" class="main">
+        @RenderBody()
+
+    </main>
+    <!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="credits">
+            Design &amp; Develop by <a href="http://www.createch-software.com/" target="_blank">Createch Software Pvt Ltd</a>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- jQuery JS -->
+    <script src="@Url.Content("~/js/jquery-3.7.1.min.js")"></script>
+
+    <!-- DataTables JS -->
+    <script src="@Url.Content("~/vendor/dataTables/datatables.min.js")"></script>
+
+    <!-- Other JS -->
+    <script src="@Url.Content("~/vendor/bootstrap/js/bootstrap.bundle.min.js")"></script>
+    <script src="@Url.Content("~/js/main.js")"></script>
+    <script src="@Url.Content("~/js/custom-alert.js")"></script>
+    <script src="@Url.Content("~/js/commonUtils.js")"></script>
+    <script src="@Url.Content("~/js/formUtils.js")"></script>
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+        const currentUrl = window.location.pathname.toLowerCase();
+        $('.nav-link').each(function () {
+            const linkHref = new URL($(this).attr('href'), window.location.origin).pathname.toLowerCase().replace(/\s+/g, '');
+
+            if (linkHref === currentUrl) {
+                $(this).removeClass('collapsed').addClass('active');
+            } else {
+                    $(this).addClass('collapsed');
+                    }
+                });
+
+                $('input[name="dsopFund"]').change(function () {
+                    if ($('#rdMarried').is(':checked')) {
+                        $('#wifeDetails').show();
+                        $('#txtWifeName').attr('required', true).addClass('is-invalid');
+                        $('#dtWifeDob').attr('required', true).addClass('is-invalid');
+                    } else {
+                        $('#wifeDetails').hide();
+                        $('#txtWifeName').removeAttr('required').removeClass('is-invalid');
+                        $('#dtWifeDob').removeAttr('required').removeClass('is-invalid');
+                    }
+                });
+
+                // Event listeners for input validation
+                $('.form-control[required], input[type="checkbox"][required], select[required], input[type="radio"][required]').on('input change', function () {
+                    validateInputElement(this);
+                });
+            });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

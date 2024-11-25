@@ -1,0 +1,36 @@
+﻿@page
+@{
+    ViewBag.Title = "List - Indian Students";
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+    {
+        pageTitle = "List - Indian Students",
+        breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Personal &amp; Service Particulars", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Indian Students", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "List", Url = "javascript:void(0)", IsActive = true }
+    }
+    })
+
+@await Component.InvokeAsync("SectionTable", new
+    {
+        sectionId = "IndianStudents",
+        buttonText = "Add Indian Students",
+        buttonRedirectUrl = "/HR/PersonalServiceParticulars/Students/Add",
+        tableHeaders = new List<string> {
+        "#",
+        "Personal Number",
+        "Name",
+        "Date of Birth",
+        "Service",
+        "PostedTo",
+        "Action"
+    }
+    })
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/HR/PersonalServiceParticulars/Students/List.cshtml.js")"></script>
+}

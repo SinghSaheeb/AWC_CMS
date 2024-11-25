@@ -1,0 +1,92 @@
+﻿@page
+@using AWC_CMS.Hndls
+@using System.Globalization
+@inject SessUser sessUser;
+@{
+    ViewBag.Title = "Health Concern";
+
+    sessUser.Wing = "SC Wing";
+    sessUser.Dob = "1999-11-11";
+    string txtAge = (DateTime.UtcNow.AddHours(5.5).Date.Year - Convert.ToDateTime(sessUser.Dob).Date.Year).ToString();
+}
+
+@await Component.InvokeAsync("Breadcrumb", new
+{
+    pageTitle = "Health Concern",
+    breadcrumbItems = new List<Item>
+    {
+        new Item { Title = "Dashboard", Url = "/Dashboard", IsActive = false },
+        new Item { Title = "Medicals", Url = "javascript:void(0)", IsActive = false },
+        new Item { Title = "Health Concern", Url = "javascript:void(0)", IsActive = true }
+    }
+    })
+
+@await Component.InvokeAsync("SectionTable", new
+    {
+        sectionId = "HealthConcern",
+        buttonText = "Add Health Concern",
+        tableHeaders = new List<string> { "#", "Date", "Issue", "Diagnosis", "Action" }
+    })
+
+<div class="modal fade" id="healthConcernModal" tabindex="-1" aria-labelledby="healthConcernModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="healthConcernModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">     
+                <form id="healthConcernForm" class="row g-3">
+                    <input type="hidden" id="healthConcernId" />
+                    @Html.AntiForgeryToken() <!-- CSRF Token -->
+                    <div class="col-6">
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="bi bi-person-badge me-1 text-primary"></i> <b>Personal Number:</b> <label id="lblPersonalNumber">@sessUser.PersNo</label></li>
+                            <li class="list-group-item"><i class="bi bi-award me-1 text-primary"></i> <b>Rank:</b> <label id=" lblRank">@sessUser.Rank</label> </li>
+                            <li class="list-group-item"><i class="bi bi-person me-1 text-primary"></i> <b>Name:</b> <label id="lblName">@sessUser.Name</label></li>
+                            <li class="list-group-item"><i class="bi bi-building me-1 text-primary"></i> <b>Present Unit:</b> <label id="lblPresentUnit">@sessUser.Unit</label></li>
+                            <li class="list-group-item"><i class="bi bi-book me-1 text-primary"></i> <b>Course:</b> <label id="lblCourse">@sessUser.Course</label></li>
+                            <li class="list-group-item"><i class="bi bi-diagram-2-fill me-1 text-primary"></i> <b>Wing:</b> <label id="lblWing">@sessUser.Wing</label></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="dtDate" placeholder="" disabled="disabled" value="@DateTime.UtcNow.AddHours(5.5).ToString("dd-MM-yyyy")">
+
+                                   <label for="dtDate">Date</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="txtAge" placeholder="" disabled="disabled" value="@txtAge">
+                                    <label for="txtAge">Age</label>
+                                </div>
+                            </div>
+                        </div> 
+                        <br />
+                        <div class="row g-3">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="txtIssue" placeholder="" maxlength="255" required></textarea>
+                                    <label for="txtIssue">Issue</label>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Pages/Medicals/HealthConcern.cshtml.js")"></script>
+
+}
