@@ -2791,5 +2791,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AWC_CMS.Controllers.UsersController",
+    "Method": "UpdateUserPassword",
+    "RelativePath": "api/Users/update-user-pwd",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "AWC_CMS.BO.UserBO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
