@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWC_CMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a0092a68ce95ed901ed808f023476a52361c3b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89e9b246c68acdba3ea3f22a3881ed6e6f6da372")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWC_CMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWC_CMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

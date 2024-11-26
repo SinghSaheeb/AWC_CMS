@@ -52,4 +52,22 @@ $(document).ready(function () {
             }
         });
     });
+
+
+   
+        function togglePasswordVisibility(id) {
+        var passwordField = document.getElementById(id); // Get password input
+        var icon = document.querySelector(`#${id} + .eye-icon`); // Get the corresponding eye icon
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text"; // Show password
+        icon.classList.remove("fa-eye"); // Switch to 'eye-slash' icon
+        icon.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "password"; // Hide password
+        icon.classList.remove("fa-eye-slash"); // Switch back to 'eye' icon
+        icon.classList.add("fa-eye");
+        }
+    }
+    
 });

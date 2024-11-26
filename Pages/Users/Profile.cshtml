@@ -14,6 +14,25 @@
         new Item { Title = "Profile", Url = "javascript:void(0)", IsActive = true }
     }
 })
+<head>
+    <style>
+        .eye-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #888;
+        }
+
+            .eye-icon:hover {
+                color: #333;
+            }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   
+</head>
 
 <section class="section profile">
     <div class="row">
@@ -123,7 +142,7 @@
                             
                             <form id="passwordChangeForm">
 
-                                <div class="row mb-3">
+                               @*  <div class="row mb-3">
                                     <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
                                     <div class="col-md-8 col-lg-9">
                                         <input name="password" type="password" class="form-control" id="currentPassword" required minlength="8" maxlength="16"
@@ -148,6 +167,35 @@
                                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$"
                                                title="Password must be 8-16 characters long, contain at least one uppercase letter, one lowercase letter, and one number.">
                                     </div>
+                                </div> *@
+                                <div class="row mb-3">
+                                    <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                                    <div class="col-md-8 col-lg-9 position-relative">
+                                        <input name="password" type="password" class="form-control" id="currentPassword" required minlength="8"
+                                               maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$"
+                                               title="Password must be 8-16 characters long, contain at least one uppercase letter, one lowercase letter, and one number.">
+                                        <i class="eye-icon fas fa-eye" onclick="togglePasswordVisibility('currentPassword')"></i>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                                    <div class="col-md-8 col-lg-9 position-relative">
+                                        <input name="newpassword" type="password" class="form-control" id="newPassword" required minlength="8"
+                                               maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$"
+                                               title="Password must be 8-16 characters long, contain at least one uppercase letter, one lowercase letter, and one number.">
+                                        <i class="eye-icon fas fa-eye" onclick="togglePasswordVisibility('newPassword')"></i>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                                    <div class="col-md-8 col-lg-9 position-relative">
+                                        <input name="renewpassword" type="password" class="form-control" id="renewPassword" required minlength="8"
+                                               maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$"
+                                               title="Password must be 8-16 characters long, contain at least one uppercase letter, one lowercase letter, and one number.">
+                                        <i class="eye-icon fas fa-eye" onclick="togglePasswordVisibility('renewPassword')"></i>
+                                    </div>
                                 </div>
 
                                 <div class="text-center">
@@ -168,6 +216,26 @@
         </div>
     </div>
 </section>
+<script>
+    // This function toggles the visibility of the password
+    function togglePasswordVisibility(id) {
+        // Get the password field by the ID passed in
+        var passwordField = document.getElementById(id);
+        // Get the corresponding eye icon
+        var icon = document.querySelector(`#${id} + .eye-icon`);
+
+        // Check if the current type is "password" (hidden) or "text" (visible)
+        if (passwordField.type === "password") {
+            passwordField.type = "text"; // Show the password
+            icon.classList.remove("fa-eye"); // Remove the "eye" icon
+            icon.classList.add("fa-eye-slash"); // Add the "eye-slash" icon (visible password)
+        } else {
+            passwordField.type = "password"; // Hide the password
+            icon.classList.remove("fa-eye-slash"); // Remove the "eye-slash" icon
+            icon.classList.add("fa-eye"); // Add the "eye" icon (hidden password)
+        }
+    }
+</script>
 
 @section Scripts {
     <script src="@Url.Content("~/Pages/Users/Profile.cshtml.js")"></script>
